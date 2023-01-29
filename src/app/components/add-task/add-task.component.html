@@ -1,0 +1,22 @@
+<form *ngIf="showAddTask" class="flex flex-col items-center mt-4" (ngSubmit)="onSubmit()">
+    <div class="flex w-1/2 flex-col px-28">
+        <span class="bg-slate-500 p-4 flex flex-col gap-4">
+            <div class="flex gap-4 flex-col">
+                <label for="text">Event</label>
+                <input type="text" name="text" [(ngModel)]="text"  id="event" class="border-1 border-solid border-black bg-white" placeholder="Add event">
+            </div>
+            <div class="flex gap-4 flex-col">
+                <label for="day">Date</label>
+                <input type="date" name="day" [(ngModel)]="day"  id="eventDate">
+            </div>
+            <div class="flex gap-4 ">
+                <label for="reminder">Set Reminder</label>
+                <input type="checkbox" name="remindar" [(ngModel)]="reminder"  id="eventReminder">
+            </div>
+            <input type="submit" class="bg-blue-600 rounded-lg py-2 font-bold text-white">
+        </span>
+     
+        
+    </div>
+   
+</form>
